@@ -1,0 +1,23 @@
+
+%p
+  %b Artist:
+  = @album.artist.name
+%p
+  %b Name:
+  = @album.name
+%p
+  %b Image:
+  = @album.image
+%p
+  %b Genre:
+  = @album.genre
+%p
+  %b Notes:
+  = @album.notes
+%p
+  %b Favourite:
+  = @album.favourite
+
+= link_to 'Edit', edit_album_path(@album)
+\|
+= link_to 'Back', albums_path

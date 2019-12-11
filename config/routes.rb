@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :albums
   resources :artists
   root 'home#home'
   get 'contact', to: 'home#contact'

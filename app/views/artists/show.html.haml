@@ -1,4 +1,3 @@
-%p#notice= notice
 
 %p
   %b Name:
@@ -12,6 +11,18 @@
 %p
   %b Favourite:
   = @artist.favourite
+
+%p Albums:
+%table
+  %tbody
+    - @artist.albums.each do |task|
+      %tr
+        %td= album.name
+        %td= link_to 'Show', album
+        %td= link_to 'Edit' edit_album_path(album)
+        %td= link_to 'Destroy', album, :method => :delete, :data => { :confirm => 'Are you sure?'}
+
+%p= link_to 'Add Album', new_album_path(artist_id; @artist)
 
 = link_to 'Edit', edit_artist_path(@artist)
 \|
