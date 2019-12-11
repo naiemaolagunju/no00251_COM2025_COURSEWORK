@@ -32,3 +32,8 @@
 en:
   app_title: MusicLibrary
   app_description: A place where you can keep and organise your entire music collection.
+
+  home:
+    home:
+      title: Music Library
+      welcome: Welcome to MusicLibrary, A web app which can be used to store and organise all your favourite tunes.
