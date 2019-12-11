@@ -30,4 +30,5 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_title: MusicLibrary
+  app_description: A place where you can keep and organise your entire music collection.
