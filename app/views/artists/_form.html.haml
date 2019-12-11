@@ -1,0 +1,22 @@
+= form_for @artist do |f|
+  - if @artist.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@artist.errors.count, "error")} prohibited this artist from being saved:"
+      %ul
+        - @artist.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :image
+    = f.text_field :image
+  .field
+    = f.label :notes
+    = f.text_area :notes
+  .field
+    = f.label :favourite
+    = f.check_box :favourite
+  .actions
+    = f.submit 'Save'
