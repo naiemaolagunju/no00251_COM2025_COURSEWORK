@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+defaultartist = Artist.where(name: 'Beyonce').first
+defaultartist.delete if defaultartist
+
+artists = Artist.create([name: 'Beyonce', image: 'bhttps://images-na.ssl-images-amazon.com/images/I/C1SJK-CimES._SL1000_.jpg', notes: 'Queen B', favourite: true])
