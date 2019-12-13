@@ -11,8 +11,14 @@ class HomeController < ApplicationController
     telephone = params[:telephone]
     message = params[:message]
 
-    if email.blank?
+    if name.blank?
+      flash[:alert] = I18n.t('home.request_contact.no_name')
+    elsif email.blank?
       flash[:alert] = I18n.t('home.request_contact.no_email')
+    elsif telephone.blank?
+    flash[:alert] = I18n.t('home.request_contact.no_telephone')
+  elsif message.blank?
+      flash[:alert] = I18n.t('home.request_contact.no_message')
     else
       #Send an email
       ContactMailer.contact_email(email, name, telephone, message).deliver_now

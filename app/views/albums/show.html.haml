@@ -6,9 +6,6 @@
   %b Name:
   = @album.name
 %p
-  %b Image:
-  = @album.image
-%p
   %b Genre:
   = @album.genre
 %p
@@ -17,6 +14,18 @@
 %p
   %b Favourite:
   = @album.favourite
+
+%p Songs:
+%table
+  %tbody
+    - @album.songs.each do |song|
+      %tr
+        %td= song.name
+        %td= link_to 'Show', song
+        %td= link_to 'Edit', edit_song_path(song)
+        %td= link_to 'Delete', song, :method => :delete, :data => { :confirm => 'Are you sure?'}
+
+%p= link_to 'Add Song', new_song_path(album_id: @album)
 
 = link_to 'Edit', edit_album_path(@album)
 \|

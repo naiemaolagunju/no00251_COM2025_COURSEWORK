@@ -1,0 +1,25 @@
+%h1 Song List
+
+%table
+  %thead
+    %tr
+      %th Album
+      %th Name
+      %th Notes
+      %th Favourite
+      %th
+      %th
+      %th
+
+  %tbody
+    - @songs.each do |song|
+      %tr
+        %td= song.album.name
+        %td= song.name
+        %td= song.notes
+        %td= song.favourite
+        %td= link_to 'Show', song
+        %td= link_to 'Edit', edit_song_path(song)
+        %td= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br

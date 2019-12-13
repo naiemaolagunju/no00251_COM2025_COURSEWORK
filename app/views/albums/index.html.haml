@@ -1,11 +1,11 @@
-%h1 Listing albums
+%h1 Albums
+%br
 
 %table
   %thead
     %tr
       %th Artist
       %th Name
-      %th Image
       %th Genre
       %th Notes
       %th Favourite
@@ -18,7 +18,6 @@
       %tr
         %td= album.artist.name
         %td= album.name
-        %td= album.image
         %td= album.genre
         %td= album.notes
         %td= album.favourite
@@ -27,5 +26,3 @@
         %td= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
-
-= link_to 'New Album', new_album_path

@@ -1,8 +1,12 @@
 require 'test_helper'
 
 class ArtistsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
     @artist = artists(:one)
+    @user = users(:one)
+    sign_in @user
   end
 
   test "should get index" do
@@ -17,10 +21,10 @@ class ArtistsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create artist" do
     assert_difference('Artist.count') do
-      post :create, artist: { favourite: @artist.favourite, image: @artist.image, name: @artist.name + " create", notes: @artist.notes }
+      post artists_url, params: {artist: { favourite: @artist.favourite, image: @artist.image, name: @artist.name + " create", notes: @artist.notes } }
     end
 
-    assert_redirected_to artist_path(assigns(:artist))
+    assert_redirected_to artist_url(Artist.last)
   end
 
   test "should show artist" do

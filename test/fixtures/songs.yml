@@ -1,15 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user: one
-  name: MyString 1
-  image: MyString
+  album: one
+  name: De ja Vu
   notes: MyText
   favourite: false
 
 two:
-  user: two
-  name: MyString 2
-  image: MyString
+  album: two
+  name: Sorry
   notes: MyText
   favourite: false

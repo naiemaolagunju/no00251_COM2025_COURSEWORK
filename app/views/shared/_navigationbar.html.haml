@@ -1,14 +1,23 @@
 %nav.navbar.navbar-inverse
   .container-fluid
     .navbar-header
-      %a.navbar-brand{:href => "root_path"} musiclibrary
+      %a.navbar-brand{:href => "/"} musiclibrary
     %ul.nav.navbar-nav
-      %li.active
-        %a{:href => "http://localhost:3000/"} Home
 
       %li
         %a{:href => "http://localhost:3000/artists"} Artists
       %li
         %a{:href => "http://localhost:3000/albums"} Albums
       %li
-        %a{:href => "#"} Songs
+        %a{:href => "http://localhost:3000/songs"} Songs
+
+    %ul.nav.navbar-nav.navbar-right
+      %li
+        %a{:href => "http://localhost:3000/users/sign_up"}
+          %span.glyphicon.glyphicon-user
+          Sign Up
+      %li
+        %a{:href => "http://localhost:3000/users/sign_in"}
+          %span.glyphicon.glyphicon-log-in
+          Sign in
+      

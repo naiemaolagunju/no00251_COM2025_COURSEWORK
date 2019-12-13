@@ -1,12 +1,41 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$secondary-col: #666666;
 
 .container {
-    padding: 20px 60px;
+    padding: 20px 80px;
 }
 
+//NAV BAR STYLES
+/* Add a gray color to all navbar links */
+
+
+
+
+//STYLES FOR THE PERSON IMAGES
+.person-recommends{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+}
+
+  .person-title{
+    margin-top: 5px;
+    text-align: center;
+  }
+
+//OTHER STYLES
+
+.popup{
+  //styles for the popup after contact form
+  color: #FFFFFF !important;
+  background-color: #000000;
+  height: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  line-height: 30px;
+}
 form label, form input{
-  display: block;
+  display: flex;
   margin: 20px;
 }

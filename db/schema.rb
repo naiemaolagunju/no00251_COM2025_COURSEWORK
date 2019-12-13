@@ -10,17 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_11_041600) do
+ActiveRecord::Schema.define(version: 2019_12_12_231909) do
 
   create_table "albums", force: :cascade do |t|
     t.integer "artist_id"
     t.string "name", null: false
-    t.string "image"
     t.string "genre", null: false
     t.text "notes"
     t.boolean "favourite"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.string "image_file_size"
     t.index ["artist_id"], name: "index_albums_on_artist_id"
   end
 
@@ -31,7 +33,19 @@ ActiveRecord::Schema.define(version: 2019_12_11_041600) do
     t.boolean "favourite"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
     t.index ["name"], name: "index_artists_on_name", unique: true
+    t.index ["user_id"], name: "index_artists_on_user_id"
+  end
+
+  create_table "songs", force: :cascade do |t|
+    t.integer "album_id"
+    t.string "name", null: false
+    t.text "notes"
+    t.boolean "favourite"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["album_id"], name: "index_songs_on_album_id"
   end
 
   create_table "users", force: :cascade do |t|

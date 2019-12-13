@@ -1,21 +1,21 @@
 = form_for @album do |f|
   - if @album.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@album.errors.count, "error")} prohibited this album from being saved:"
+      %h2= "#{pluralize(@album.errors.count, "error")} prohibited this artist from being saved:"
       %ul
         - @album.errors.full_messages.each do |message|
           %li= message
 
   .field
-    = f.label :artist
-    %p= @album.artist.name
-    = f.hidden_field :artist_id, value: @album.artist.id
-  .field
     = f.label :name
-    = f.text_field :name
+    = @album.artist.name
+    = f.hidden_field :artist_id, value: @album.artist
+  .field
+    =f.label :name
+    =f.text_field :name
   .field
     = f.label :image
-    = f.text_field :image
+    = f.file_field :image
   .field
     = f.label :genre
     = f.text_field :genre
@@ -26,4 +26,4 @@
     = f.label :favourite
     = f.check_box :favourite
   .actions
-    = f.submit 'Save'
+    = f.submit 'Save', :class => "btn btn-primary full-width"

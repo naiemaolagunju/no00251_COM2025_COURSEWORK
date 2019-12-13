@@ -12,17 +12,17 @@
   %b Favourite:
   = @artist.favourite
 
+%p= link_to 'Add Album', new_album_path(artist_id: @artist)
+
 %p Albums:
 %table
   %tbody
-    - @artist.albums.each do |task|
+    - @artist.albums.each do |album|
       %tr
         %td= album.name
         %td= link_to 'Show', album
-        %td= link_to 'Edit' edit_album_path(album)
-        %td= link_to 'Destroy', album, :method => :delete, :data => { :confirm => 'Are you sure?'}
-
-%p= link_to 'Add Album', new_album_path(artist_id; @artist)
+        %td= link_to 'Edit', edit_album_path(album)
+        %td= link_to 'Delete', album, :method => :delete, :data => { :confirm => 'Are you sure?'}
 
 = link_to 'Edit', edit_artist_path(@artist)
 \|

@@ -1,4 +1,4 @@
-%h1 Listing artists
+%h1 Artists
 
 %table
   %thead
@@ -16,6 +16,7 @@
       %tr
         %td= artist.name
         %td= artist.image
+        %td= = link_to image_tag( 'beyonce.jpg'), 'https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwizsJmtmLPmAhWGohQKHX_1A4EQjRx6BAgBEAQ&url=https%3A%2F%2Ftwitter.com%2Fbeyoncequeeny&psig=AOvVaw1TsLGe-8kGaaR7uHJwUf2P&ust=1576345923852302'
         %td= artist.notes
         %td= artist.favourite
         %td= link_to 'Show', artist

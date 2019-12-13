@@ -1,2 +1,21 @@
-%h1= t('.title')
-%p= t('.welcome')
+
+%p{:class => "text-center"}
+  %em=t('.welcome')
+
+%div{:class => "bg-1"}
+  %p{:class => "text-center"}
+    %em=t('.subtitle-text')
+  %br
+  %div{:class => "row"}
+    %div{:class => "col-sm-3"}
+      =image_tag "Justin Bieber.jpeg", :alt => "Justin Bieber", :class => "img-circle person-recommends"
+      %h4{:class => "person-title"}=t('.artist1')
+    %div{:class => "col-sm-3"}
+      =image_tag "beyonce.jpg", :alt => "Beyonce", :class => "img-circle person-recommends"
+      %h4{:class => "person-title"}=t('.artist2')
+    %div{:class => "col-sm-3"}
+      =image_tag "Rihanna.webp", :alt => "Rihanna", :class => "img-circle person-recommends"
+      %h4{:class => "person-title"}=t('.artist3')
+    %div{:class => "col-sm-3"}
+      =image_tag "Katy Perry.jpeg", :alt => "Katy Perry", :class => "img-circle person-recommends"
+      %h4{:class => "person-title"}=t('.artist4')

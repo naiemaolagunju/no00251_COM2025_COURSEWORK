@@ -38,6 +38,13 @@ en:
       title: Music Library
       welcome: Welcome to MusicLibrary, A web app which can be used to store and organise all your favourite tunes.
 
+      subtitle-text: Here are some of our users.
+
+      artist1: Justin Bieber
+      artist2: Beyonce Knowles
+      artist3: Rihanna Fenty
+      artist4: Katy Perry
+
     contact:
       title: Contact Us
       contact_us: Kindly, complete the form to get in touch with us. We hope to reply as soon as possible.
@@ -54,4 +61,16 @@ en:
 
     request_contact:
       no_email: You must supply an email address
+      no_telephone: We require your number to send you updates.
+      no_message: Message body can't be left blank.
       email_sent: Thank you. We will be in touch shortly.
+
+    albums:
+      image: Image
+      songs: Songs
+
+      artist: "Artist:"
+      image: "Image:"
+      genre: "Genre"
+      notes: "Notes"
+      favourite: "Favourite"
