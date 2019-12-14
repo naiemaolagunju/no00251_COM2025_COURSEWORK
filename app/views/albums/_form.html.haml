@@ -9,7 +9,7 @@
   .field
     = f.label :name
     = @album.artist.name
-    = f.hidden_field :artist_id, value: @album.artist
+    = f.hidden_field :artist_id, value: @album.artist.id
   .field
     =f.label :name
     =f.text_field :name

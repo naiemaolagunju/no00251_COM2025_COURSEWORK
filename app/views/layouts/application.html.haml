@@ -16,18 +16,19 @@
     = csrf_meta_tags
 
   %body
+    #page-container
+      #container
 
-    %div{:class => "container"}
+        = render 'shared/header'
 
-    = render 'shared/header'
-
-    = render 'shared/navigationbar'
+        = render 'shared/navigationbar'
 
 
+        %div{:style => "overflow-x:auto;"}
 
-    - flash.each do |key, value|
-      = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
+        - flash.each do |key, value|
+          = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
 
-    = yield
+        = yield
 
-    = render 'shared/footer'
+        = render 'shared/footer'
