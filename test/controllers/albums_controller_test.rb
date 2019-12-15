@@ -25,7 +25,7 @@ class AlbumsControllerTest < ActionDispatch::IntegrationTest
   test "should create album" do
     sign_in @user
     assert_difference('Album.count') do
-      post albums_url, params: { album: { artist_id: @artist.id, favourite: @album.favourite, genre: @album.genre, name: @album.name, notes: @album.notes } }
+      post albums_url, params: { album: { artist_id: @artist.id, favourite: @album.favourite, genre: @album.genre, image: @album.image, name: @album.name, notes: @album.notes } }
     #  post :create, album: { artist_id: @artist, favourite: @album.favourite, genre: @album.genre, image: @album.image, name: @album.name, notes: @album.notes }
     end
 
@@ -48,7 +48,7 @@ class AlbumsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update album" do
     sign_in @user
-    patch album_url(@album), params: { album: { artist_id: @album.artist.id, favourite: @album.favourite, genre: @album.genre, name: @album.name, notes: @album.notes } }
+    patch album_url(@album), params: { album: { artist_id: @album.artist.id, favourite: @album.favourite, genre: @album.genre, image: @album.image, name: @album.name, notes: @album.notes } }
     #patch :update, id: @album, album: { artist_id: @album.artist.id, favourite: @album.favourite, genre: @album.genre, name: @album.name, notes: @album.notes }
     assert_redirected_to album_url(@album)
     #assert_redirected_to album_path(assigns(:album))

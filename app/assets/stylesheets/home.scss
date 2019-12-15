@@ -4,13 +4,18 @@ $secondary-col: #666666;
     padding: 20px 80px;
 }
 
-//NAV BAR STYLES
-/* Add a gray color to all navbar links */
+//SCSS image style
+img{
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  object-fit: cover;
+}
 
 
-
-
-//STYLES FOR THE PERSON IMAGES
+//SCSS style for the persons image
 .person-recommends{
   text-align: center;
   margin-left: auto;
@@ -24,18 +29,21 @@ $secondary-col: #666666;
     text-align: center;
   }
 
-//OTHER STYLES
-
-.popup{
-  //styles for the popup after contact form
-  color: #FFFFFF !important;
-  background-color: #000000;
-  height: 30px;
-  margin-bottom: 30px;
-  border-radius: 5px;
-  line-height: 30px;
-}
+//SCSS style for any form
 form label, form input{
   display: flex;
-  margin: 20px;
+  margin: 5px;
+}
+
+.transition {
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    transform: scale(1.6);
+}
+#content {
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
 }

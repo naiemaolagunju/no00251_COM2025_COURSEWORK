@@ -4,6 +4,7 @@ one:
   artist: one
   name: MyString 1
   genre: MyString
+  image: MyString
   notes: MyText
   favourite: false
 
@@ -11,5 +12,6 @@ two:
   artist: two
   name: MyString 2
   genre: MyString
+  image: MyString
   notes: MyText
   favourite: false

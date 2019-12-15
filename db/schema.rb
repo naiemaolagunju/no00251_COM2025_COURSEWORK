@@ -15,14 +15,12 @@ ActiveRecord::Schema.define(version: 2019_12_12_231909) do
   create_table "albums", force: :cascade do |t|
     t.integer "artist_id"
     t.string "name", null: false
+    t.string "image"
     t.string "genre", null: false
     t.text "notes"
     t.boolean "favourite"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image_file_name"
-    t.string "image_content_type"
-    t.string "image_file_size"
     t.index ["artist_id"], name: "index_albums_on_artist_id"
   end
 

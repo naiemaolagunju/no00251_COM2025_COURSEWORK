@@ -6,6 +6,7 @@
     %tr
       %th Artist
       %th Name
+      %th Image 
       %th Genre
       %th Notes
       %th Favourite
@@ -18,6 +19,8 @@
       %tr
         %td= album.artist.name
         %td= album.name
+        %td
+          %img{:src => album.image}
         %td= album.genre
         %td= album.notes
         %td= album.favourite

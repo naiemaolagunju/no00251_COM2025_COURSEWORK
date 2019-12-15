@@ -1,10 +1,12 @@
-%h1 Song List
+%h1 Songs
+%br
 
 %table
   %thead
     %tr
       %th Album
       %th Name
+      %th Artist
       %th Notes
       %th Favourite
       %th Show
@@ -16,6 +18,7 @@
       %tr
         %td= song.album.name
         %td= song.name
+        %td= song.album.artist.name
         %td= song.notes
         %td= song.favourite
         %td= link_to 'Show', song
