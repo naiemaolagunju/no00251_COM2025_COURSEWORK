@@ -1,32 +1,32 @@
 %h1 Albums
 %br
-
-%table
-  %thead
-    %tr
-      %th Artist
-      %th Name
-      %th Image
-      %th Genre
-      %th Notes
-      %th Favourite
-      %th Show
-      %th Edit
-      %th Destroy
-
-  %tbody
-    - @albums.each do |album|
+%div.table-responsive
+  %table
+    %thead
       %tr
-        %td= album.artist.name
-        %td= album.name
-        %td
-          %img{:src => album.image}
-        %td= album.genre
-        %td= album.notes
-        %td= album.favourite
-        %td= link_to I18n.t('albums.index.show'), album, :class => "btn btn-primary full-width"
-        %td= link_to I18n.t('albums.index.edit'), edit_album_path(album), :class => "btn btn-primary full-width"
-        %td= link_to I18n.t('albums.index.destroy'), album, method: :delete, data: { confirm: I18n.t('albums.index.confirm') }, :class => "btn btn-primary full-width"
+        %th Artist
+        %th Name
+        %th Image
+        %th Genre
+        %th Notes (Optional)
+        %th Favourite
+        %th Show
+        %th Edit
+        %th Destroy
+
+    %tbody
+      - @albums.each do |album|
+        %tr
+          %td= album.artist.name
+          %td= album.name
+          %td
+            %img{:src => album.image}
+          %td= album.genre
+          %td= album.notes
+          %td= album.favourite
+          %td= link_to I18n.t('albums.index.show'), album, :class => "btn btn-primary full-width"
+          %td= link_to I18n.t('albums.index.edit'), edit_album_path(album), :class => "btn btn-primary full-width"
+          %td= link_to I18n.t('albums.index.destroy'), album, method: :delete, data: { confirm: I18n.t('albums.index.confirm') }, :class => "btn btn-primary full-width"
 
 
 %br

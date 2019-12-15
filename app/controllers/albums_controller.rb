@@ -8,7 +8,7 @@ class AlbumsController < ApplicationController
   # GET /albums
   # GET /albums.json
   def index
-    @albums = Album.all
+    @albums = Album.user_albums(current_user)
   end
 
   # GET /albums/1
@@ -29,10 +29,11 @@ class AlbumsController < ApplicationController
   # POST /albums.json
   def create
     @album = @artist.albums.new(album_params)
+    @album.user = current_user
 
     respond_to do |format|
       if @album.save
-        format.html { redirect_to @album, notice: I18n.t('album.create.success') }
+        format.html { redirect_to @album, notice: I18n.t('albums.create.success') }
         format.json { render :show, status: :created, location: @album }
       else
         format.html { render :new }
@@ -46,7 +47,7 @@ class AlbumsController < ApplicationController
   def update
     respond_to do |format|
       if @album.update(album_params)
-        format.html { redirect_to @album, notice: I18n.t('album.update.success') }
+        format.html { redirect_to @album, notice: I18n.t('albums.update.success') }
         format.json { render :show, status: :ok, location: @album }
       else
         format.html { render :edit }
@@ -60,7 +61,7 @@ class AlbumsController < ApplicationController
   def destroy
     @album.destroy
     respond_to do |format|
-      format.html { redirect_to albums_url, notice: I18n.t('album.destroy.success') }
+      format.html { redirect_to albums_url, notice: I18n.t('albums.destroy.success') }
       format.json { head :no_content }
     end
   end

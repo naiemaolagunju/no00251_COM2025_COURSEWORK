@@ -1,28 +1,28 @@
 %h1 Artists
 %br
-
-%table
-  %thead
-    %tr
-      %th Name
-      %th Image
-      %th Notes
-      %th Favourite
-      %th Show
-      %th Edit
-      %th Destroy
-
-  %tbody
-    - @artists.each do |artist|
+%div.table-responsive
+  %table
+    %thead
       %tr
-        %td= artist.name
-        %td
-          %img{:src => artist.image}
-        %td= artist.notes
-        %td= artist.favourite
-        %td= link_to I18n.t('artists.index.show'), artist, :class => "btn btn-primary full-width"
-        %td= link_to I18n.t('artists.index.edit'), edit_artist_path(artist), :class => "btn btn-primary full-width"
-        %td= link_to I18n.t('artists.index.destroy'), artist, method: :delete, data: { confirm: I18n.t('artist.index.confirm') }, :class => "btn btn-primary full-width"
+        %th Name
+        %th Image
+        %th Notes (Optional)
+        %th Favourite
+        %th Show
+        %th Edit
+        %th Destroy
+
+    %tbody
+      - @artists.each do |artist|
+        %tr
+          %td= artist.name
+          %td
+            %img{:src => artist.image}
+          %td= artist.notes
+          %td= artist.favourite
+          %td= link_to I18n.t('artists.index.show'), artist, :class => "btn btn-primary full-width"
+          %td= link_to I18n.t('artists.index.edit'), edit_artist_path(artist), :class => "btn btn-primary full-width"
+          %td= link_to I18n.t('artists.index.destroy'), artist, method: :delete, data: { confirm: I18n.t('artist.index.confirm') }, :class => "btn btn-primary full-width"
 
 %br
 

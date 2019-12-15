@@ -1,28 +1,28 @@
 %h1 Songs
 %br
-
-%table
-  %thead
-    %tr
-      %th Album
-      %th Name
-      %th Artist
-      %th Notes
-      %th Favourite
-      %th Show
-      %th Edit
-      %th Destroy
-
-  %tbody
-    - @songs.each do |song|
+%div.table-responsive
+  %table
+    %thead
       %tr
-        %td= song.album.name
-        %td= song.name
-        %td= song.album.artist.name
-        %td= song.notes
-        %td= song.favourite
-        %td= link_to I18n.t('songs.index.show'), song, :class => "btn btn-primary full-width"
-        %td= link_to I18n.t('songs.index.edit'), edit_song_path(song), :class => "btn btn-primary full-width"
-        %td= link_to I18n.t('songs.index.destroy'), song, method: :delete, data: { confirm: I18n.t('song.index.confirm') }, :class => "btn btn-primary full-width"
+        %th Album
+        %th Name
+        %th Artist
+        %th Notes (Optional)
+        %th Favourite
+        %th Show
+        %th Edit
+        %th Destroy
+
+    %tbody
+      - @songs.each do |song|
+        %tr
+          %td= song.album.name
+          %td= song.name
+          %td= song.album.artist.name
+          %td= song.notes
+          %td= song.favourite
+          %td= link_to I18n.t('songs.index.show'), song, :class => "btn btn-primary full-width"
+          %td= link_to I18n.t('songs.index.edit'), edit_song_path(song), :class => "btn btn-primary full-width"
+          %td= link_to I18n.t('songs.index.destroy'), song, method: :delete, data: { confirm: I18n.t('song.index.confirm') }, :class => "btn btn-primary full-width"
 
 %br

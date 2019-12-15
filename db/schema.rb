@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2019_12_12_231909) do
 
   create_table "albums", force: :cascade do |t|
-    t.integer "artist_id"
+    t.integer "artist_id", null: false
     t.string "name", null: false
     t.string "image"
     t.string "genre", null: false

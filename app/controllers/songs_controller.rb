@@ -6,7 +6,7 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-    @songs = Song.all
+    @songs = Song.user_songs(current_user)
   end
 
   # GET /songs/1
@@ -27,10 +27,11 @@ class SongsController < ApplicationController
   # POST /songs.json
   def create
     @song = @album.songs.new(song_params)
+    @song.user = current_user
 
     respond_to do |format|
       if @song.save
-        format.html { redirect_to @song, notice: I18n.t('song.create.success') }
+        format.html { redirect_to @song, notice: I18n.t('songs.create.success') }
         format.json { render :show, status: :created, location: @song }
       else
         format.html { render :new }
@@ -44,7 +45,7 @@ class SongsController < ApplicationController
   def update
     respond_to do |format|
       if @song.update(song_params)
-        format.html { redirect_to @song, notice: I18n.t('song.create.success') }
+        format.html { redirect_to @song, notice: I18n.t('songs.update.success') }
         format.json { render :show, status: :ok, location: @song }
       else
         format.html { render :edit }
@@ -58,7 +59,7 @@ class SongsController < ApplicationController
   def destroy
     @song.destroy
     respond_to do |format|
-      format.html { redirect_to songs_url, notice: I18n.t('song.create.success') }
+      format.html { redirect_to songs_url, notice: I18n.t('songs.destroy.success') }
       format.json { head :no_content }
     end
   end
