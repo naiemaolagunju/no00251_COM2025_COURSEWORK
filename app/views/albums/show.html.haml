@@ -24,11 +24,11 @@
     - @album.songs.each do |song|
       %tr
         %td= song.name
-        %td= link_to I18n.t('album.show.show'), song, :class => "btn btn-primary full-width"
-        %td= link_to I18n.t('album.show.edit'), edit_song_path(song), :class => "btn btn-primary full-width"
-        %td= link_to I18n.t('album.show.destroy'), song, :method => :delete, :data => { :confirm => 'Are you sure?'}, :class => "btn btn-primary full-width"
-%br 
-%p= link_to I18n.t('album.show.AddSong'), new_song_path(album_id: @album), :class => "btn btn-primary full-width"
+        %td= link_to I18n.t('albums.show.show'), song, :class => "btn btn-primary full-width"
+        %td= link_to I18n.t('albums.show.edit'), edit_song_path(song), :class => "btn btn-primary full-width"
+        %td= link_to I18n.t('albums.show.destroy'), song, :method => :delete, :data => { :confirm => 'Are you sure?'}, :class => "btn btn-primary full-width"
+%br
+%p= link_to I18n.t('albums.show.AddSong'), new_song_path(album_id: @album), :class => "btn btn-primary full-width"
 
 %br
 = link_to 'Edit', edit_album_path(@album), :class => "btn btn-primary full-width"

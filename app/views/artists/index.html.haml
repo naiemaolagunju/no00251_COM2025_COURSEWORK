@@ -20,10 +20,10 @@
           %img{:src => artist.image}
         %td= artist.notes
         %td= artist.favourite
-        %td= link_to I18n.t('artist.index.show'), artist, :class => "btn btn-primary full-width"
-        %td= link_to I18n.t('artist.index.edit'), edit_artist_path(artist), :class => "btn btn-primary full-width"
-        %td= link_to I18n.t('artist.index.destroy'), artist, method: :delete, data: { confirm: I18n.t('artist.index.confirm') }, :class => "btn btn-primary full-width"
+        %td= link_to I18n.t('artists.index.show'), artist, :class => "btn btn-primary full-width"
+        %td= link_to I18n.t('artists.index.edit'), edit_artist_path(artist), :class => "btn btn-primary full-width"
+        %td= link_to I18n.t('artists.index.destroy'), artist, method: :delete, data: { confirm: I18n.t('artist.index.confirm') }, :class => "btn btn-primary full-width"
 
 %br
 
-= link_to I18n.t('artist.new.newartist'), new_artist_path, :class => "btn btn-primary full-width"
+= link_to I18n.t('artists.new.newartist'), new_artist_path, :class => "btn btn-primary full-width"
