@@ -6,7 +6,7 @@
     %tr
       %th Artist
       %th Name
-      %th Image 
+      %th Image
       %th Genre
       %th Notes
       %th Favourite
@@ -24,9 +24,9 @@
         %td= album.genre
         %td= album.notes
         %td= album.favourite
-        %td= link_to 'Show', album
-        %td= link_to 'Edit', edit_album_path(album)
-        %td= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to I18n.t('album.index.show'), album, :class => "btn btn-primary full-width"
+        %td= link_to I18n.t('album.index.edit'), edit_album_path(album), :class => "btn btn-primary full-width"
+        %td= link_to I18n.t('album.index.destroy'), album, method: :delete, data: { confirm: I18n.t('album.index.confirm') }, :class => "btn btn-primary full-width"
 
 
 %br

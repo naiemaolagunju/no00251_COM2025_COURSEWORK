@@ -1,7 +1,8 @@
-%h1 Edit your album
+%h1= I18n.t('album.edit.name')
+%p= I18n.t('album.edit.subtitle')
 
 = render 'form'
 
-= link_to 'Show', @album
+= link_to 'Show', @album, :class => "btn btn-primary full-width"
 \|
-= link_to 'Back', albums_path
+= link_to 'Back', albums_path, :class => "btn btn-primary full-width"

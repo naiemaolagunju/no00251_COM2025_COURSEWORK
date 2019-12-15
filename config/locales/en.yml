@@ -66,24 +66,46 @@ en:
       no_message: Message body can't be left blank.
       email_sent: Thank you. We will be in touch shortly.
 
-    artists:
-      form:
-        name: Name
-        image: Image URL
-        notes: Notes
-        save: Save
-      edit:
-        name: Edit your artist
+  artist:
+    create:
+      success: Artist has been created successfully.
+    update:
+      success: Artist has been updated successfully.
+    destroy:
+      success: Artist has been destroyed successfully.
+    form:
+      save: Save
+    edit:
+      name: Edit your artist
+      subtitle: Make changes to any of the artist fields.
+    index:
+      show: Show
+      edit: Edit
+      destroy: Destroy
+    new:
+      newartist: New Artist
+      subtitle: To add a new artist. Kindly, fill in the form below.
+    show:
+      AddAlbum: Add Album
+      show: Show
+      edit: Edit
+      destroy: Destroy
 
+  album:
+    create:
+      success: Album has been created successfully.
+    update:
+      success: Album has been updated successfully.
+    destroy:
+      success: Album has been destroyed successfully.
+    form:
+      save: Save
+    edit:
+      name: Edit your album
+      subtitle: Make changes to any of the album fields.
+    index:
+      show: Show
+      edit: Edit
+      destroy: Destroy
 
-
-
-    albums:
-      image: Image
-      songs: Songs
-
-      artist: "Artist:"
-      image: "Image:"
-      genre: "Genre"
-      notes: "Notes"
-      favourite: "Favourite"
+      confirm: Are you sure you want to delete this album?

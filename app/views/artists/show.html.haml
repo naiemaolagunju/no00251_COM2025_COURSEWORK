@@ -12,7 +12,7 @@
   %b Favourite:
   = @artist.favourite
 
-%p= link_to 'Add Album', new_album_path(artist_id: @artist)
+%p= link_to I18n.t('artist.show.AddAlbum'), new_album_path(artist_id: @artist)
 
 %p Albums:
 %table
@@ -20,9 +20,9 @@
     - @artist.albums.each do |album|
       %tr{id: "artist_#{@artist.id}"}
         %td= album.name
-        %td= link_to 'Show', album
-        %td= link_to 'Edit', edit_album_path(album)
-        %td= link_to 'Delete', album, :method => :delete, :data => { :confirm => 'Are you sure?'}, :remote => true
+        %td= link_to I18n.t('artist.show.show'), album
+        %td= link_to I18n.t('artist.show.edit'), edit_album_path(album)
+        %td= link_to I18n.t('artist.show.destroy'), album, :method => :delete, :data => { :confirm => 'Are you sure?'}, :remote => true
 
 = link_to 'Edit', edit_artist_path(@artist)
 \|
