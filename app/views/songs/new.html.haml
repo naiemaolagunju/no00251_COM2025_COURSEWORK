@@ -1,5 +1,6 @@
-%h1 New song
+%h1= I18n.t('song.new.newsong')
+%p= I18n.t('song.new.subtitle')
 
 = render 'form'
 
-= link_to 'Back', songs_path
+= link_to 'Back', songs_path, :class => "btn btn-primary full-width"

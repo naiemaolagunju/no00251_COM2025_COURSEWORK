@@ -82,6 +82,8 @@ en:
       show: Show
       edit: Edit
       destroy: Destroy
+
+      confirm: Are you sure you want to delete this artist?
     new:
       newartist: New Artist
       subtitle: To add a new artist. Kindly, fill in the form below.
@@ -109,3 +111,41 @@ en:
       destroy: Destroy
 
       confirm: Are you sure you want to delete this album?
+
+    new:
+      newalbum: New Album
+      subtitle: To add a new album. Kindly, fill in the form below.
+
+    show:
+      AddSong: Add Song
+      show: Show
+      edit: Edit
+      destroy: Destroy
+
+  song:
+    create:
+      success: Song has been created successfully.
+    update:
+      success: Song has been updated successfully.
+    destroy:
+      success: Song has been destroyed successfully.
+    form:
+      save: Save
+    edit:
+      name: Edit your song.
+      subtitle: Make changes to any of the song fields.
+    index:
+      show: Show
+      edit: Edit
+      destroy: Destroy
+
+      confirm: Are you sure you want to delete this song?
+
+    new:
+      newsong: New Song
+      subtitle: To add a new song. Kindly, fill in the form below.
+
+    show:
+      show: Show
+      edit: Edit
+      destroy: Destroy

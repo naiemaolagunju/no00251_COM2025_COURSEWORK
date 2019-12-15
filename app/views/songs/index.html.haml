@@ -21,8 +21,8 @@
         %td= song.album.artist.name
         %td= song.notes
         %td= song.favourite
-        %td= link_to 'Show', song
-        %td= link_to 'Edit', edit_song_path(song)
-        %td= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to I18n.t('song.index.show'), song, :class => "btn btn-primary full-width"
+        %td= link_to I18n.t('song.index.edit'), edit_song_path(song), :class => "btn btn-primary full-width"
+        %td= link_to I18n.t('song.index.destroy'), song, method: :delete, data: { confirm: I18n.t('song.index.confirm') }, :class => "btn btn-primary full-width"
 
 %br

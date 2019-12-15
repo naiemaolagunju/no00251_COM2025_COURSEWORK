@@ -12,7 +12,7 @@
   %b Favourite:
   = @artist.favourite
 
-%p= link_to I18n.t('artist.show.AddAlbum'), new_album_path(artist_id: @artist)
+%p= link_to I18n.t('artist.show.AddAlbum'), new_album_path(artist_id: @artist), :class => "btn btn-primary full-width"
 
 %p Albums:
 %table
@@ -20,10 +20,12 @@
     - @artist.albums.each do |album|
       %tr{id: "artist_#{@artist.id}"}
         %td= album.name
-        %td= link_to I18n.t('artist.show.show'), album
-        %td= link_to I18n.t('artist.show.edit'), edit_album_path(album)
-        %td= link_to I18n.t('artist.show.destroy'), album, :method => :delete, :data => { :confirm => 'Are you sure?'}, :remote => true
+        %td= link_to I18n.t('artist.show.show'), album, :class => "btn btn-primary full-width"
+        %td= link_to I18n.t('artist.show.edit'), edit_album_path(album), :class => "btn btn-primary full-width"
+        %td= link_to I18n.t('artist.show.destroy'), album, :method => :delete, :data => { :confirm => 'Are you sure?'}, :remote => true, :class => "btn btn-primary full-width"
 
-= link_to 'Edit', edit_artist_path(@artist)
+%br
+
+= link_to 'Edit', edit_artist_path(@artist), :class => "btn btn-primary full-width"
 \|
-= link_to 'Back', artists_path
+= link_to 'Back', artists_path, :class => "btn btn-primary full-width"

@@ -1,5 +1,6 @@
-%h1 New album
+%h1= I18n.t('album.new.newalbum')
+%p= I18n.t('album.new.subtitle')
 
 = render 'form'
 
-= link_to 'Back', albums_path
+= link_to 'Back', albums_path, :class => "btn btn-primary full-width"
