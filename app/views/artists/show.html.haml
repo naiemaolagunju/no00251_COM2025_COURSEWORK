@@ -18,11 +18,11 @@
 %table
   %tbody
     - @artist.albums.each do |album|
-      %tr
+      %tr{id: "artist_#{@artist.id}"}
         %td= album.name
         %td= link_to 'Show', album
         %td= link_to 'Edit', edit_album_path(album)
-        %td= link_to 'Delete', album, :method => :delete, :data => { :confirm => 'Are you sure?'}
+        %td= link_to 'Delete', album, :method => :delete, :data => { :confirm => 'Are you sure?'}, :remote => true
 
 = link_to 'Edit', edit_artist_path(@artist)
 \|

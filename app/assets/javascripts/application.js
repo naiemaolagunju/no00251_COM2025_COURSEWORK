@@ -18,9 +18,9 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
-
+//Added Jquery to allow zoom on images on the home page
 $(document).ready(function () {
-  $('#div image').hover(
+  $('img').hover(
     function () {
       console.log("test")
       $(this).animate({'zoom': 1.2}, 400);

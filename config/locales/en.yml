@@ -60,10 +60,23 @@ en:
       submit: Contact Us
 
     request_contact:
+      no_name: Please enter your name
       no_email: You must supply an email address
       no_telephone: We require your number to send you updates.
       no_message: Message body can't be left blank.
       email_sent: Thank you. We will be in touch shortly.
+
+    artists:
+      form:
+        name: Name
+        image: Image URL
+        notes: Notes
+        save: Save
+      edit:
+        name: Edit your artist
+
+
+
 
     albums:
       image: Image
