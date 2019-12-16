@@ -8,4 +8,3 @@
 
 defaultartist = Artist.where(name: 'Beyonce').first
 defaultartist.delete if defaultartist
-defaultartist.delete if defaultartist
