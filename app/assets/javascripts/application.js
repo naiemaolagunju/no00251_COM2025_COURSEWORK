@@ -23,7 +23,7 @@ $(document).ready(function () {
   $('img').hover(
     function () {
       console.log("test")
-      $(this).animate({'zoom': 1.2}, 400);
+      $(this).animate({'zoom': 1.3}, 400);
 
     },
     function () {
