@@ -13,13 +13,13 @@
  *= require_tree .
  *= require_self
  */
-
+//Added bootstrap
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
 
 
-
+//text-font and color.
 $font-family: verdana, arial, helvetica, sans-serif;
 $bg-color: #FFB75E;
 
@@ -79,7 +79,7 @@ footer {
   margin-right: auto;
   margin-left: auto;
 }
-
+//Allows the app to be accessed from any browser: Google chrome, safari and mozilla Firefox
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
