@@ -2,12 +2,14 @@
 
 one:
   album: one
+  user: one
   name: De ja Vu
   notes: MyText
   favourite: false
 
 two:
   album: two
+  user: two
   name: Sorry
   notes: MyText
   favourite: false

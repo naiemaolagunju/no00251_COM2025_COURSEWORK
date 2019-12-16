@@ -2,6 +2,7 @@ class CreateAlbums < ActiveRecord::Migration[5.2]
   def change
     create_table :albums do |t|
       t.belongs_to :artist, index: true, foreign_key: true, null: false
+      t.belongs_to :user, index: true, foreign_key: true, null: false
       t.string :name, null: false
       t.string :image
       t.string :genre, null: false

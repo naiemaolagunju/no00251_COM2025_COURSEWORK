@@ -3,6 +3,7 @@
 one:
   artist: one
   name: MyString 1
+  user: one
   genre: MyString
   image: MyString
   notes: MyText
@@ -10,6 +11,7 @@ one:
 
 two:
   artist: two
+  user: two
   name: MyString 2
   genre: MyString
   image: MyString

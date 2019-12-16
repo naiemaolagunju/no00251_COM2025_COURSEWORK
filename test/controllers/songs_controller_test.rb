@@ -45,7 +45,7 @@ class SongsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update song" do
     sign_in @user
-    patch song_url(@song), params: { song: { album_id: @song.album_id, favourite: @song.favourite, name: @song.name, notes: @song.notes } }
+    patch song_url(@song), params: { song: { album_id: @song.album.id, favourite: @song.favourite, name: @song.name, notes: @song.notes } }
     assert_redirected_to song_url(@song)
   end
 

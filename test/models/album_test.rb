@@ -4,6 +4,8 @@ class AlbumTest < ActiveSupport::TestCase
 
   setup do
     @artist = artists(:one)
+    @user = users(:one)
+
   end
 
   test 'should not save empty album' do
@@ -17,6 +19,7 @@ class AlbumTest < ActiveSupport::TestCase
     album = Album.new
 
     album.name = 'Lemonade'
+    album.user = @user
     album.genre = 'Pop'
     album.favourite = true
     album.notes = 'Queen B'

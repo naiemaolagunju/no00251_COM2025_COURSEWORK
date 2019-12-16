@@ -4,6 +4,8 @@ class SongTest < ActiveSupport::TestCase
 
   setup do
     @album = albums(:one)
+    @user = users(:one)
+
   end
 
   test 'should not save empty song' do
@@ -25,6 +27,7 @@ class SongTest < ActiveSupport::TestCase
     song = Song.new
     song.name = "Needed me"
     song.album = @album
+    song.user = @user
 
     song.save
     assert song.valid?
